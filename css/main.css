@@ -22,34 +22,34 @@ html {
 *,
 *:before,
 *:after {
-    box-sizing: inherit;
     margin: 0;
     padding: 0;
     border: 0;
+    box-sizing: inherit;
 }
 
 @font-face {
     font-family: "Austin";
     src: url(/fonts/Austin-Medium-Cy-Web.woff2) format("woff2");
+    font-weight: normal;
     font-style: normal;
     font-stretch: normal;
-    font-weight: normal;
 }
 
 @font-face {
     font-family: "Austin";
     src: url(/fonts/Austin-Italic-Cy-Web.woff2) format("woff2");
+    font-weight: normal;
     font-style: italic;
     font-stretch: normal;
-    font-weight: normal;
 }
 
 @font-face {
     font-family: "StyreneB";
     src: url(/fonts/StyreneB-Regular-Cy-Web.woff2) format("woff2");
+    font-weight: normal;
     font-style: normal;
     font-stretch: normal;
-    font-weight: normal;
 }
 
 body {
@@ -69,11 +69,9 @@ body {
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
 }
-
 p {
     margin-bottom: 1.25em;
 }
-
 h1,
 h2,
 h3,
@@ -87,24 +85,19 @@ h4 {
     -ms-font-feature-settings: "cswh", "swsh", "dlig";
     font-feature-settings: "cswh", "swsh", "dlig";
 }
-
 h1 {
     margin-top: 0;
     font-size: 2.827em;
 }
-
 h2 {
     font-size: 1.999em;
 }
-
 h3 {
     font-size: 1.999em;
 }
-
 h4 {
     font-size: 1.414em;
 }
-
 blockquote {
     padding: 2.75rem 0;
     background: transparent;
@@ -124,7 +117,6 @@ q:lang(ru)::before,
 q:lang(ru)::after {
     color: var(--color-bd);
 }
-
 img {
     max-width: 100%;
     height: auto;
@@ -160,7 +152,7 @@ img {
     border-image-slice: 1;
 }
 
-/* ~~~~~ LT ~~~~~ */
+/* ========= LT ========= */
 
 header > section {
     grid-area: 2/1;
@@ -235,6 +227,7 @@ header > .main-img {
         display: block;
         clear: both;
     }
+
     @supports (display: grid) {
         /* override */
         .grid > *,
@@ -321,23 +314,18 @@ header > .main-img {
     p {
         font-size: 1.414em;
     }
-
     h1 {
         font-size: 5.653em;
     }
-
     h2 {
         font-size: 3.998em;
     }
-
     h3 {
         font-size: 2.827em;
     }
-
     h4 {
         font-size: 1.999em;
     }
-
     blockquote {
         padding: 2.75rem 0;
     }
