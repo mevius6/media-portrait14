@@ -89,7 +89,7 @@ body {
     max-width: 90vw;
     min-height: 100vh;
     font-family: "StyreneB", sans-serif;
-    font-feature-settings: "ss01", "kern";
+    font-feature-settings: "kern";
     font-weight: 400;
     line-height: 1.45;
     color: var(--color-bd);
@@ -99,6 +99,7 @@ body {
 }
 p {
     margin-bottom: 1.25em;
+    font-feature-settings: "ss01";
 }
 h1,
 h2,
