@@ -140,7 +140,7 @@ blockquote::after {
     content: none;
 }
 q:lang(ru) {
-    quotes: "\201C""\201D"; /* "“" "”"; "«" "»" */
+    quotes: "\201C""\201D";
     font: 1.999em/1.15 Austin-Italic, serif;
 }
 q:lang(ru)::before,
