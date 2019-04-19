@@ -1,9 +1,38 @@
 html {
     line-height: 1.15;
-    font-size: 1em;
-    box-sizing: border-box;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
+}
+article,
+figcaption,
+figure,
+footer,
+header,
+main,
+section {
+    display: block;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    border-style: none;
+    -o-object-fit: cover;
+    object-fit: cover;
+    vertical-align: middle;
+}
+body {
+    margin: 0;
+}
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+
+/* ========= BS ========= */
+
+html {
+    font-size: 1em;
+    box-sizing: border-box;
     scroll-behavior: smooth;
 }
 
@@ -18,8 +47,8 @@ html {
 }
 
 *,
-*:before,
-*:after {
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     border: 0;
@@ -36,7 +65,7 @@ html {
 }
 
 @font-face {
-    font-family: Austin Italic;
+    font-family: Austin-Italic;
     src: url(fonts/Austin-Italic-Cy-Web.woff2) format("woff2");
     font-weight: normal;
     font-style: normal;
@@ -112,19 +141,11 @@ blockquote::after {
 }
 q:lang(ru) {
     quotes: "\201C""\201D"; /* "“" "”"; "«" "»" */
-    font: 1.999em/1.15 Austin Italic, serif;
+    font: 1.999em/1.15 Austin-Italic, serif;
 }
 q:lang(ru)::before,
 q:lang(ru)::after {
     color: var(--color-bd);
-}
-img {
-    max-width: 100%;
-    height: auto;
-    border-style: none;
-    -o-object-fit: cover;
-    object-fit: cover;
-    vertical-align: middle;
 }
 
 .bordered {
@@ -329,7 +350,7 @@ header > .main-img {
         padding: 2.75rem 0;
     }
     q {
-        font: italic 3.998em/1.15 Austin, serif;
+        font: 3.998em/1.15 Austin-Italic, serif;
     }
 }
 
