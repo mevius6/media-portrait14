@@ -341,7 +341,7 @@ header > .main-img {
     blockquote {
         padding: 2.75rem 0;
     }
-    q:lang(ru) {
+    q {
         font: italic 3.998em/1.15 Austin, serif;
     }
 }
