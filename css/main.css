@@ -137,12 +137,12 @@ blockquote::after {
     content: "";
     content: none;
 }
-q:lang(ru) {
+q {
     quotes: "\201C""\201D";
     font: 1.999em/1.15 Austin-Italic, serif;
 }
-q:lang(ru)::before,
-q:lang(ru)::after {
+q::before,
+q::after {
     color: var(--color-bd);
 }
 
