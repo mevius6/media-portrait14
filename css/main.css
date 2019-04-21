@@ -162,7 +162,6 @@ q::after {
         var(--color-bd) 50%,
         transparent 100%
     );
-    border-image-slice: 100%;
     border-image: linear-gradient(
         to left,
         transparent 0%,
