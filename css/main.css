@@ -148,7 +148,8 @@ q::after {
 }
 
 .bordered {
-    border: solid black;
+    border-style: solid;
+    border-color: var(--color-bd);
     border-width: 1px 0 1px 0;
     -moz-border-image: -moz-linear-gradient(
         right,
