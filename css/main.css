@@ -1,39 +1,10 @@
-html {
-    line-height: 1.15;
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-}
-article,
-figcaption,
-figure,
-footer,
-header,
-main,
-section {
-    display: block;
-}
-img {
-    max-width: 100%;
-    height: auto;
-    border-style: none;
-    -o-object-fit: cover;
-    object-fit: cover;
-    vertical-align: middle;
-}
-body {
+html{font-size:1em;line-height:1.15;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;box-sizing:border-box;scroll-behavior:smooth}article,figcaption,figure,footer,header,main,section{display:block}img{max-width:100%;height:auto;border-style:none;-o-object-fit:cover;object-fit:cover;vertical-align:middle}h1{font-size:2em;margin:0.67em 0}
+*,
+*::before,
+*::after {
     margin: 0;
-}
-h1 {
-    font-size: 2em;
-    margin: 0.67em 0;
-}
-
-/* ========= BS ========= */
-
-html {
-    font-size: 1em;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+    padding: 0;
+    box-sizing: inherit;
 }
 
 ::-moz-selection {
@@ -44,15 +15,6 @@ html {
 ::selection {
     background: transparent;
     text-shadow: none;
-}
-
-*,
-*::before,
-*::after {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    box-sizing: inherit;
 }
 
 @font-face {
@@ -81,9 +43,10 @@ html {
 }
 
 body {
-    --spacing: 1.6%; /* 20px */
     --color-bg: hsl(0, 0%, 98%);
     --color-bd: hsl(0, 0%, 13.3%);
+    --col-max-w: 38em;
+    --spacing: 1.6%;
     background: var(--color-bg);
     margin: 0 auto;
     max-width: 90vw;
@@ -174,7 +137,7 @@ q::after {
 }
 
 header > section {
-    grid-area: 2/1;
+    grid-area: 2 / 1;
 
     display: -webkit-box;
     display: -ms-flexbox;
@@ -184,10 +147,9 @@ header > section {
     width: 100%;
 }
 header > .main-img {
-    --bg-img: url("/img/1.jpg");
-    background: content-box top / cover no-repeat var(--bg-img);
     width: 100%;
     height: 100vh;
+    background: content-box top / cover no-repeat url(/img/1.jpg);
 }
 
 .grid > .header {
@@ -199,7 +161,7 @@ header > .main-img {
     grid:
         "img"
         "."
-        /1fr;
+        / 1fr;
 }
 .grid > .img-wrap {
     grid-area: img;
@@ -208,15 +170,11 @@ header > .main-img {
     padding: calc(var(--spacing) / 2);
     grid-area: bd;
 
-    --col-w: 38em;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-direction: normal;
-    -webkit-box-orient: vertical;
-    -ms-flex-direction: column;
     flex-flow: column;
-    max-width: var(--col-w);
+    max-width: var(--col-max-w);
     word-wrap: break-word;
     overflow-wrap: break-word;
 }
@@ -240,7 +198,6 @@ header > .main-img {
 }
 
 @media screen and (min-width: 600px) {
-    /* clearfix */
     .grid:after {
         content: "";
         display: block;
@@ -248,7 +205,6 @@ header > .main-img {
     }
 
     @supports (display: grid) {
-        /* override */
         .grid > *,
         .grid.media > * {
             margin: 0;
@@ -263,8 +219,8 @@ header > .main-img {
 
         .grid > .header {
             grid:
-                ".   img"
-                /1fr 1fr;
+                ". img"
+                / 1fr 1fr;
         }
         .grid > .content {
             margin: 0 auto;
@@ -273,7 +229,7 @@ header > .main-img {
 
         header > section {
             padding: 0;
-            grid-area: 1/1;
+            grid-area: 1 / 1;
         }
 
         .grid {
@@ -282,10 +238,10 @@ header > .main-img {
             place-items: center;
             grid-column-gap: var(--spacing);
             grid:
-                "hd  hd" auto
+                "hd hd" auto
                 "img bd"
-                "bq  bq"
-                /1fr 1fr;
+                "bq bq"
+                / 1fr 1fr;
         }
 
         .grid.media {
@@ -297,7 +253,7 @@ header > .main-img {
         .grid.media-flip {
             grid:
                 "img bd"
-                /1fr 1fr;
+                / 1fr 1fr;
         }
 
         .grid.multi-col {
@@ -307,8 +263,8 @@ header > .main-img {
         .grid.media-flip.img-multi-col {
             grid:
                 "img img img"
-                "bq  bq  bq"
-                /1fr 1fr 1fr;
+                "bq bq bq"
+                / 1fr 1fr 1fr;
         }
         .grid.media-flip.img-multi-col > .img-wrap:nth-child(1) {
             grid-area: 1 / 1;
@@ -322,9 +278,9 @@ header > .main-img {
 
         .grid.grid.media-flip.bq {
             grid:
-                "bq  bq"
+                "bq bq"
                 "img bd"
-                /1fr 1fr;
+                / 1fr 1fr;
         }
     }
 }
